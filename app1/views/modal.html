@@ -1,0 +1,30 @@
+<div id="Modal" class="modal">
+    <div class="modal-header">
+        <h3>New Book</h3>
+    </div>
+    <!-- Modal content -->
+    <form name="NewForm" class="modal-content">
+        <div class="modal-text">
+            <div class="input-field">
+                <label id="label1" for="title">:</label>*
+                <input name="title" id="title"  ng-model="obj.title" type="text" size="30" required>
+                <span class="noti-error" ng-show="(NewForm.title.$dirty)&&(NewForm.title.$error.required)">Required!</span>
+            </div>
+            <div class="input-field">
+                <label id="label2" for="name">:</label>*
+                <input id="name" name="name" ng-model="obj.name" type="text" size="30" required>
+                 <span class="noti-error" ng-show="(NewForm.name.$dirty)&&(NewForm.name.$error.required)">Required!</span>
+            </div>
+            <div class="input-field">
+                <label id="image" for="image">:</label>
+                <input upload type="file" ng-model="obj.image" name="upload">
+            </div>
+        </div>
+        <div class="upload-image" ><img src="{{image}}" alt=""></div>
+       </form>
+    <div class="modal-footer">
+        <input type="button" ng-class="NewForm.$invalid?'error':''" value="OK" ng-disabled="NewForm.$invalid" ng-click="confirm()">
+        <input type="button" value="Cancel" ng-click="reset();"> 
+    </div>
+   
+</div>

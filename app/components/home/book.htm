@@ -1,0 +1,16 @@
+<div class="cards book">
+    <div style="background-image:url({{book.src}})" ng-class="{{book.category}} == post ?'cards-avatar-fulid':'cards-avatar'">
+    </div>
+    <div  ng-click="modal=false" ng-class="{{book.category}} == post ?'cards-profile-fulid':'cards-profile'">
+        <div class="cards-header">
+            <div class="cards-profile">
+                <h2>{{book.title}}</h2>
+                <h6>by {{book.author}}</h6>
+            </div>
+        </div>
+        <div class="cards-main">
+            <input type="button" value="Free Sample">
+            <input type="button" value="Review">
+        </div>
+    </div>
+</div>

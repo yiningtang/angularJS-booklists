@@ -1,0 +1,15 @@
+<nav class="navbar">
+        <div class="nav-header">
+            <h2>My Works</h2>
+            <div class="mobile" id="m" ng-click="toggleMenu()"><img ng-show="collapsed" ng-src="images\icons\ic_menu_24px.svg"><img ng-show="!collapsed" ng-src="images/icons/ic_close_24px.svg"></div>
+        </div>
+        <div class="nav-menu ">
+        <ul  class="slideDown" ng-repeat="book in books">
+         <li>{{book.title}}</li>
+        </ul>
+          <!-- <ul id="menu" ng-show="collapsed == false" ng-repeat="book in books" class="slideDown" >
+                <li>{{book.title}}fhjgk</li>
+            </ul>-->
+        </div>
+        
+    </nav>

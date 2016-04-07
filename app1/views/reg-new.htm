@@ -1,0 +1,28 @@
+<div class="cards notifi-successful">
+    <div class="cards-header">
+        <h3>Welcome Back!</h3>
+        <p>It's been a long while.
+            <br> Ready any new books lately?</p>
+        <br>
+        <br>
+    </div>
+    <div class="cards-main">
+        <input type="button" value="No" ng-click="dismissCard()">
+        <input type="button" value="Yes" ng-click="modal=true" id="ModalTrigger">
+    </div>
+</div>
+
+
+<div id="Modal" class="modal" ng-show="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">x</span>
+    <p><input type="text" value="title"></p>
+    <p><input type="text" value="author"></p>
+  </div>
+   <div class="modal-footer">
+  <button class="btn btn-primary" data-dismiss="modal" ng-model="modal" ng-click="addBook();modal=false">OK</button>
+  <button class="btn btn-warning" data-dismiss="modal" ng-click="modal=false">Cancel</button>
+   </div>
+</div>

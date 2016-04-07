@@ -1,0 +1,51 @@
+input[type="button"] {
+    border: none;
+    background: none;
+    color: orange;
+}
+
+.cards {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 4px 4px @cards-shadow;
+    border: 1px solid #ddd;
+    width: 95%;
+    margin: 1em;
+    margin-right: 0;
+    .cards-header {
+        padding: 1em;
+        border-bottom: 1px solid @cards-shadow;
+    }
+    .cards-main {
+        padding: 1em;
+    }
+}
+
+.cards-avatar-fulid {
+    .bg-full-page(100%, 230px, no-repeat, center, cover);
+}
+
+.cards-profile-fulid {
+    width: 90%;
+    display: block;
+    padding: 1em;
+    border-bottom: 1px solid @cards-shadow;
+    .cards-profile{
+        display: block;
+    }
+}
+
+.cards-avatar {
+    .bg-full-page(30%, 230px, no-repeat, center, cover);
+}
+
+.cards-avatar,
+.cards-profile {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cards-profile {
+    width: 65%;
+}
+

@@ -1,0 +1,119 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/Roboto-Regular.woff);
+    src: url(../assets/fonts/Roboto-Regular.eot);
+    src: url(../assets/fonts/Roboto-Regular.svg);
+    src: url(../assets/fonts/Roboto-Regular.woff2);
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: @main-content-bg;
+    font-family: Roboto;
+}
+
+
+
+
+//navbar//
+nav.navbar {
+    position: relative;
+    height: 100px;
+    .nav-header {
+        height: 50px;
+        background-color: @navbar-bg;
+        h2 {
+            position: relative;
+            top: 0;
+            left: 3em;
+            margin: 0;
+            line-height: 50px;
+            @media (max-width: 775px) {
+                position: relative;
+                top: 0;
+                left: 4.5em;
+            }
+        }
+        .mobile {
+            z-index: 1000;
+            position: absolute;
+            top: 0.7em;
+            left: 2em;
+            cursor: pointer;
+            @media (min-width: 776px) {
+                display: none;
+            }
+            @media (max-width:775px) {
+                display: block;
+            }
+        }
+    }
+    .nav-menu {
+        background-color: white;
+        height: 50px;
+        @media(min-width: 776px) {
+            ul {
+                display: inline-block !important;
+                li {
+                    list-style: none;
+                    padding: 0 1em;
+                    color: black;
+                }
+            }
+        }
+    }
+    @media (max-width:775px) {
+        ul {
+            margin: 0;
+            padding: 2em;
+            background-color: #fff;
+            display: none;
+            .bg-full-page(100%, 25px, no-repeat, center, cover);
+            li {
+                .ul-list(none, block);
+            }
+        }
+    }
+}
+
+//home
+.main-content {
+    background-color: @main-content-bg;
+    .flex-display();
+  
+    height: 100%;
+    min-height: 100%;
+ 
+    .col {
+        @media (min-width: 776px) {
+            .make-col(2);
+        }
+        @media (max-width:776px) {
+            .make-col(1);
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    width: 100%;
+    .opacity(0.8);
+    
+}
+
+
+
+
+

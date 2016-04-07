@@ -1,0 +1,34 @@
+.make-col(@num){
+	width:98%/@num;
+	
+
+}
+.flex-display{
+	 display: flex;
+	justify-content:center;
+	flex-wrap: wrap;
+	
+	
+}
+
+.cards{
+	width:100%;
+
+}
+.bg-full-page(@width,@height,@repeat,@position, @size){
+width:@width;
+height:@height;
+background-repeat: @repeat;
+background-position:@position;
+background-size: @size;
+}
+.ul-list(@listStyle,@display){
+	list-style: @listStyle;
+	display: @display;
+}
+
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}

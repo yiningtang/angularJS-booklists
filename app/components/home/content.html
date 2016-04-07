@@ -1,0 +1,32 @@
+<section class="main-content">
+    <div class="col">
+        <!--<div ng-include="'views/reg-new.htm'"></div>-->
+        <div class="cards notifi-successful" ng-show='newBook'>
+            <div class="cards-header">
+                <h3>Welcome Back!</h3>
+                <p>It's been a long while.
+                    <br> Ready any new books lately?</p>
+                <br>
+                <br>
+            </div>
+            <div class="cards-main">
+                <input type="button" value="No" ng-click="newBook=false">
+                <input type="button" value="Yes" ng-click="modal=true" id="ModalTrigger">
+            </div>
+        </div>
+        <modal title="Please Enter a New Book" name="Please Enter an Author" image="Please Upload a Book Cover:" ng-show="modal" ng-model="modal" books="books">
+        </modal>
+        <div ng-repeat="book in books">
+            <div ng-show="{{book.category}} == book ">
+                <div ng-include="'components/home/book.htm'"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div ng-repeat="book in books">
+            <div ng-show="{{book.category}} == post">
+                <div ng-include="'components/home/book.htm'"></div>
+            </div>
+        </div>
+    </div>
+</section>

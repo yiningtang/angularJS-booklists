@@ -1,0 +1,210 @@
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    //height: 100%;
+    //height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: @main-content-bg;
+}
+
+// utility//
+input[type=button] {
+    border: none;
+    background: none;
+    color: orange;
+}
+
+.cards {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 4px 4px @cards-shadow;
+    border: 1px solid #ddd;
+    width: 95%;
+    margin: 1em;
+    margin-right: 0;
+    .cards-header {
+        padding: 1em;
+        border-bottom: 1px solid @cards-shadow;
+    }
+    .cards-main {
+        padding: 1em;
+    }
+}
+
+.cards-avatar-fulid {
+    .bg-full-page(100%, 230px, no-repeat, center, cover);
+}
+
+.cards-avatar {
+    .bg-full-page(30%, 230px, no-repeat, center, cover);
+}
+
+.cards-avatar,
+.cards-profile {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cards-profile {
+    width: 65%;
+    border: 1px solid red;
+}
+
+//
+nav.navbar {
+    position: relative;
+    height: 100px;
+    .nav-header {
+        height: 50px;
+        background-color: @navbar-bg;
+        h2 {
+            position: relative;
+            top: 0;
+            left: 3em;
+            margin: 0;
+            line-height: 50px;
+            @media (max-width: 775px) {
+                position: relative;
+                top: 0;
+                left: 4.5em;
+            }
+        }
+        .mobile {
+            z-index: 1000;
+            position: absolute;
+            top: 0.7em;
+            left: 2em;
+            cursor: pointer;
+            @media (min-width: 776px) {
+                display: none;
+            }
+            @media (max-width:775px) {
+                display: block;
+            }
+        }
+    }
+    .nav-menu {
+        background-color: white;
+        height: 50px;
+        @media(min-width: 776px) {
+            ul {
+                display: inline-block !important;
+                li {
+                    list-style: none;
+                    padding: 0 1em;
+                    color: black;
+                }
+            }
+        }
+    }
+    @media (max-width:775px) {
+        ul {
+            margin: 0;
+            padding: 2em;
+            background-color: #fff;
+            display: none;
+            .bg-full-page(100%, 25px, no-repeat, center, cover);
+            li {
+                .ul-list(none, block);
+            }
+        }
+    }
+}
+
+.main-content {
+    background-color: @main-content-bg;
+    .flex-display();
+    //@media (min-width:776px){
+    height: 100%;
+    min-height: 100%;
+    //}
+    .col {
+        @media (min-width: 776px) {
+            .make-col(2);
+        }
+        @media (max-width:776px) {
+            .make-col(1);
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    width: 100%;
+    //height: 110%;
+    //height:100%;
+    .opacity(0.8);
+    //.horizontal-gradient(gray,gray,0%,100%);
+}
+
+//.horizontal-gradient(@start-color, @end-color, @start-percent: 0%; @end-percent: 100%)
+.slideDown {
+    -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;
+    -moz-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;
+    -o-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;
+    opacity: 1;
+    display: block;
+    height: 25px;
+}
+
+.slideDown.ng-hide {
+    opacity: 0;
+    height: 0px;
+    display: block !important;
+}
+
+#Modal {
+    //display: none;
+    border: 1px solid red;
+    background-color: white;
+    width: 70%;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    margin: 0 0 0 -35%;
+}
+
+.boundInDwon {
+    -webkit-animation: bounceInDown 1s;
+    -moz-animation: bounceInDown 1s;
+    -ms-animation: bounceInDown 1s;
+    animation: bounceInDown 1s;
+}
+
+.fadeOut {
+    -webkit-animation: fadeOut 1s;
+    -moz-animation: fadeOut 1s;
+    -ms-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+}
+
+.modal-content {
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    .modal-text {
+    	border:1px solid red;
+        width: 40%;
+        display: inline-block;
+        height: 250px;
+    }
+    .upload-image {
+        img {
+            width: 45%;
+            height: 250px;
+            border: 1px dashed #ddd;
+           
+            
+        }
+    }
+}
